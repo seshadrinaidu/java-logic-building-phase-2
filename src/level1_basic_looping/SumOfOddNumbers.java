@@ -1,39 +1,45 @@
-/*
-Problem 7 : Print the sum of the first n natural numbers.
+package level1_basic_looping;/*
+Problem 9 : Print the sum of all odd numbers up to n.
 
 Sample Input 1:
-Enter the Number : 5
+Enter N : 10
 
 Sample Output 1:
-15
+Sum of Odd Numbers : 25
 
 Explanation:
-1 + 2 + 3 + 4 + 5 = 15
+1 + 3 + 5 + 7 + 9 = 25
 
 --------------------------------------------------
 
 Sample Input 2:
-Enter the Number : 1
+Enter N : 7
 
 Sample Output 2:
-1
+Sum of Odd Numbers : 16
+
+Explanation:
+1 + 3 + 5 + 7 = 16
 
 --------------------------------------------------
 
 Sample Input 3:
-Enter the Number : 0
+Enter N : 1
 
 Sample Output 3:
-0
+Sum of Odd Numbers : 1
+
+Explanation:
+Only one odd number exists between 1 and 1.
 
 --------------------------------------------------
 
 Topics Involved:
 - for loop
-- Loop initialization
-- Loop condition
-- Loop increment
-- Running sum (Accumulator Pattern)
+- if statement
+- Modulus operator (%)
+- Running Sum (Accumulator Pattern)
+- Filtering Pattern
 - User input using Scanner
 - Console output
 
@@ -51,12 +57,18 @@ Step 3:
 Run the loop from i = 1 to i <= n.
 
 Step 4:
-Add the current value of i to sum.
+Check whether i is odd using:
+
+i % 2 != 0
 
 Step 5:
-Repeat until the loop ends.
+If the condition is true,
+add i to sum.
 
 Step 6:
+Repeat until the loop terminates.
+
+Step 7:
 Print the final value of sum.
 
 --------------------------------------------------
@@ -65,7 +77,7 @@ Time Complexity:
 O(n)
 
 Reason:
-The loop executes n times.
+The loop iterates from 1 to n and checks every number once.
 
 --------------------------------------------------
 
@@ -79,29 +91,35 @@ No extra memory is required.
 --------------------------------------------------
 
 Reusable Pattern:
-Running Sum (Accumulator Pattern)
+Filtering + Running Sum (Accumulator Pattern)
 
 Pattern Template:
 
 int sum = 0;
 
 for(...) {
-    sum += value;
+    if(condition) {
+        sum += value;
+    }
 }
 
-This pattern is used whenever we need to keep a cumulative total while iterating.
+This pattern is used when we need to iterate through a range,
+filter values based on a condition,
+and accumulate their sum.
 */
 import java.util.Scanner;
 
-public class SumOfFirstNaturalNumbers {
+public class SumOfOddNumbers {
     public static void main(String[] args){
         Scanner scanner=new Scanner(System.in);
-        System.out.print("Enter the Number : ");
+        System.out.print("Enter N : ");
         int n=scanner.nextInt();
         int sum=0;
         for (int i=1;i<=n;i++){
-            sum+=i;
+            if (i%2!=0){
+                sum+=i;
+            }
         }
-        System.out.println(sum);
+        System.out.println("Sum of Odd Numbers : "+sum);
     }
 }

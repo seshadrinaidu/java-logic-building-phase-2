@@ -1,36 +1,38 @@
-/*
-Problem 11 : Print the product of digits of a given number.
+package level2_number_based_looping;/*
+Level 2 - Number Based Looping Logic
+
+Problem 1 : Count the number of digits in a given number.
 
 Sample Input 1:
-Enter Number : 1234
+Enter Number : 12345
 
 Sample Output 1:
-Product of Digits : 24
+5
 
 Explanation:
-1 × 2 × 3 × 4 = 24
+The number 12345 has 5 digits.
 
 --------------------------------------------------
 
 Sample Input 2:
-Enter Number : 505
+Enter Number : 7
 
 Sample Output 2:
-Product of Digits : 0
+1
 
 Explanation:
-5 × 0 × 5 = 0
+The number has only one digit.
 
 --------------------------------------------------
 
 Sample Input 3:
-Enter Number : 7
+Enter Number : 9080
 
 Sample Output 3:
-Product of Digits : 7
+4
 
 Explanation:
-The number has only one digit.
+Digits are 9, 0, 8, 0.
 
 --------------------------------------------------
 
@@ -39,7 +41,7 @@ Topics Involved:
 - Digit Extraction
 - Modulus operator (%)
 - Integer division (/)
-- Running Product (Accumulator Pattern)
+- Counter Pattern
 - User input using Scanner
 - Console output
 
@@ -51,7 +53,7 @@ Step 1:
 Read the number from the user.
 
 Step 2:
-Initialize product = 1.
+Initialize digitCount = 0.
 
 Step 3:
 Run the loop while n > 0.
@@ -62,9 +64,7 @@ Extract the last digit using:
 digit = n % 10
 
 Step 5:
-Multiply the digit with product.
-
-product *= digit
+Increase digitCount by 1.
 
 Step 6:
 Remove the last digit using:
@@ -75,7 +75,7 @@ Step 7:
 Repeat until n becomes 0.
 
 Step 8:
-Print the final product.
+Print digitCount.
 
 --------------------------------------------------
 
@@ -83,7 +83,7 @@ Time Complexity:
 O(d)
 
 Reason:
-The loop executes once for each digit in the number.
+The loop executes once for each digit.
 
 Here,
 d = number of digits.
@@ -95,42 +95,41 @@ O(1)
 
 Reason:
 Only a few integer variables are used.
-No extra memory is required.
 
 --------------------------------------------------
 
 Reusable Pattern:
-Digit Extraction + Running Product
+Digit Extraction + Counter Pattern
 
 Pattern Template:
 
-int product = 1;
+int count = 0;
 
 while(number > 0){
 
     digit = number % 10;
 
-    product *= digit;
+    count++;
 
     number /= 10;
 }
 
-This pattern is used whenever we need to process
-each digit of a number individually.
+This pattern is used whenever we need to visit
+each digit and count something.
 */
-import java.util.Scanner;
+import  java.util.Scanner;
 
-public class ProductOfDigits {
+public class CountDigits {
     public static void main(String[] args){
-        Scanner scanner=new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.print("Enter Number : ");
         int n=scanner.nextInt();
-        int product=1;
+        int digitsCount=0;
         while (n>0){
-            int digit=n%10;
-            product*=digit;
+            int digits=n%10;
+            digitsCount++;
             n=n/10;
         }
-        System.out.println("Product of Digits : "+product);
+        System.out.println("Total Digits Of a given number : "+digitsCount);
     }
 }

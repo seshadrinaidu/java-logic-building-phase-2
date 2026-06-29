@@ -1,4 +1,4 @@
-/*
+package level1_basic_looping;/*
 Problem 4 : Print all odd numbers from 1 to 100.
 
 Sample Input:

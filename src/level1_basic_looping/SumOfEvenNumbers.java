@@ -1,25 +1,25 @@
-/*
-Problem 9 : Print the sum of all odd numbers up to n.
+package level1_basic_looping;/*
+Problem 8 : Print the sum of all even numbers up to n.
 
 Sample Input 1:
 Enter N : 10
 
 Sample Output 1:
-Sum of Odd Numbers : 25
+Sum of Even Numbers are : 30
 
 Explanation:
-1 + 3 + 5 + 7 + 9 = 25
+2 + 4 + 6 + 8 + 10 = 30
 
 --------------------------------------------------
 
 Sample Input 2:
-Enter N : 7
+Enter N : 5
 
 Sample Output 2:
-Sum of Odd Numbers : 16
+Sum of Even Numbers are : 6
 
 Explanation:
-1 + 3 + 5 + 7 = 16
+2 + 4 = 6
 
 --------------------------------------------------
 
@@ -27,10 +27,10 @@ Sample Input 3:
 Enter N : 1
 
 Sample Output 3:
-Sum of Odd Numbers : 1
+Sum of Even Numbers are : 0
 
 Explanation:
-Only one odd number exists between 1 and 1.
+There are no even numbers between 1 and 1.
 
 --------------------------------------------------
 
@@ -57,9 +57,9 @@ Step 3:
 Run the loop from i = 1 to i <= n.
 
 Step 4:
-Check whether i is odd using:
+Check whether i is even using:
 
-i % 2 != 0
+i % 2 == 0
 
 Step 5:
 If the condition is true,
@@ -103,23 +103,23 @@ for(...) {
     }
 }
 
-This pattern is used when we need to iterate through a range,
-filter values based on a condition,
+This pattern is used when we need to visit every value,
+select only those satisfying a condition,
 and accumulate their sum.
 */
 import java.util.Scanner;
 
-public class SumOfOddNumbers {
+public class SumOfEvenNumbers {
     public static void main(String[] args){
         Scanner scanner=new Scanner(System.in);
         System.out.print("Enter N : ");
         int n=scanner.nextInt();
         int sum=0;
         for (int i=1;i<=n;i++){
-            if (i%2!=0){
+            if (i%2==0){
                 sum+=i;
             }
         }
-        System.out.println("Sum of Odd Numbers : "+sum);
+        System.out.println("sum of Even Numbers are : "+sum);
     }
 }

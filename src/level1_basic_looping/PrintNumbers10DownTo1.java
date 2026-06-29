@@ -1,3 +1,5 @@
+package level1_basic_looping;
+
 /*
 Problem 5 : Print numbers from 10 down to 1.
 
