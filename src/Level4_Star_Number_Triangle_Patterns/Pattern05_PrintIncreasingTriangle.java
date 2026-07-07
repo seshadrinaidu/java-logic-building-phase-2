@@ -58,7 +58,7 @@ package Level4_Star_Number_Triangle_Patterns;
 
 import java.util.Scanner;
 
-public class Pattern04_PrintIncreasingTriangle {
+public class Pattern05_PrintIncreasingTriangle {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter N : ");
