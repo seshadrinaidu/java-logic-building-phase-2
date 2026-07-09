@@ -80,7 +80,7 @@ public class Pattern09_CenteredPyramid {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
         System.out.print(" Enter Number : ");
-        int number = scanner.nextInt();
+        var number = scanner.nextInt();
         // Outer Loop runs 1 to numbers
         for (int i = 1; i <= number; i++){
             // Inner Loop for spaces left side only
