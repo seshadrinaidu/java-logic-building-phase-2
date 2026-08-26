@@ -1,0 +1,354 @@
+Pattern 1 — Array Traversal & Access
+Core idea
+array
+  ↓
+visit each element
+  ↓
+process it
+Problems
+
+1. Input n elements and print all elements.
+
+2. Print all elements with their indexes.
+
+3. Print the array in reverse order using indexes.
+
+4. Print only elements at even indexes.
+
+5. Print only elements at odd indexes.
+
+6. Print elements greater than a given value k.
+
+Pattern learned
+for (int i = 0; i < arr.length; i++) {
+    // process arr[i]
+}
+
+This is the foundation of everything that follows.
+
+🟢 Pattern 2 — Accumulator
+
+You've already learned this with numbers.
+
+Now transfer:
+
+number → digits → sum
+
+into:
+
+array → elements → sum
+Problems
+
+7. Find the sum of all elements.
+
+8. Find the average of all elements.
+
+9. Find the sum of even elements.
+
+10. Find the sum of odd elements.
+
+11. Find the product of all elements.
+
+12. Find the sum of elements at even indexes.
+
+Pattern
+initialize
+     ↓
+traverse
+     ↓
+update accumulator
+🟡 Pattern 3 — Counter + Conditional Traversal
+Problems
+
+13. Count positive, negative and zero elements.
+
+14. Count even and odd elements.
+
+15. Count elements greater than k.
+
+16. Count elements smaller than k.
+
+17. Count elements divisible by 3.
+
+18. Count prime numbers in the array.
+
+19. Count perfect-square elements.
+
+Pattern
+Traversal
+    ↓
+Condition
+    ↓
+Counter++
+
+This connects directly with the logical-loop patterns you learned earlier.
+
+🟡 Pattern 4 — Min / Max Tracking
+
+This is a very important DSA pattern.
+
+Problems
+
+20. Find the maximum element.
+
+21. Find the minimum element.
+
+22. Find the index of the maximum element.
+
+23. Find the index of the minimum element.
+
+24. Find the difference between maximum and minimum.
+
+25. Find the sum of all elements except the maximum.
+
+26. Find the sum of all elements except the minimum.
+
+Pattern
+current best
+     ↓
+compare
+     ↓
+update
+
+This is where you learn state tracking.
+
+🟠 Pattern 5 — Searching
+
+Now we ask:
+
+"Does this value exist?"
+
+Problems
+
+27. Check whether a given x exists.
+
+28. Find the first occurrence of x.
+
+29. Find the last occurrence of x.
+
+30. Count occurrences of x.
+
+31. Find the index of x.
+
+32. Check whether all elements are unique.
+
+Pattern
+Traversal
+    ↓
+Comparison
+    ↓
+Decision / Position / Count
+
+This will become extremely useful later when we learn linear search and binary search.
+
+🟠 Pattern 6 — Transformation
+
+Now we're no longer just reading the array.
+
+We're creating a changed version.
+
+Problems
+
+33. Create a new array containing squares.
+
+34. Create a new array containing cubes.
+
+35. Create a new array containing only even elements.
+
+36. Replace every negative number with 0.
+
+37. Replace every even number with 1 and odd number with 0.
+
+38. Copy one array into another manually.
+
+Pattern
+Original Array
+      ↓
+Process
+      ↓
+New Array
+
+This is an important transition toward more advanced array problems.
+
+🔵 Pattern 7 — Position Manipulation
+
+Now we start working with indexes and positions.
+
+Problems
+
+39. Swap the first and last elements.
+
+40. Swap the first and second elements.
+
+41. Swap alternate elements.
+
+42. Reverse the array without a built-in method.
+
+43. Rotate the array one position left.
+
+44. Rotate the array one position right.
+
+Pattern
+Index manipulation
+       +
+Variable swapping
+
+And this is where your previous Two Pointer learning becomes useful.
+
+For example:
+
+left                    right
+ ↓                        ↓
+[10, 20, 30, 40, 50]
+
+Reverse:
+
+swap
+left++
+right--
+
+So your old pattern isn't wasted—it is now being applied to collections.
+
+🔵 Pattern 8 — Array Comparison
+
+Now we work with two collections.
+
+Problems
+
+45. Check whether two arrays are exactly equal.
+
+46. Check whether two arrays have the same elements in the same order.
+
+47. Check whether two arrays contain the same elements ignoring order.
+
+48. Find common elements between two arrays.
+
+49. Find elements present in the first array but not the second.
+
+50. Find the element-wise sum of two arrays.
+
+🔴 Pattern 9 — Frequency & Duplicates
+
+This is the final basic-array pattern before we move toward real DSA techniques.
+
+Problems
+
+51. Count how many times a given element appears.
+
+52. Print the frequency of every distinct element.
+
+53. Print all duplicate elements.
+
+54. Print all elements that occur exactly once.
+
+55. Find the most frequent element.
+
+56. Find the least frequent element.
+
+This section will eventually connect directly to:
+
+Array
+  ↓
+Frequency
+  ↓
+HashMap
+
+And since you've already started learning HashMap, this will be an important bridge.
+
+🏁 Pattern 10 — Basic Logical Array Problems
+
+Finally, combine the patterns.
+
+Problems
+
+57. Check if the array is sorted in ascending order.
+
+58. Check if the array is sorted in descending order.
+
+59. Find the second largest element.
+
+60. Find the second smallest element.
+
+61. Count how many elements are greater than the average.
+
+62. Count how many pairs have a given sum k.
+
+🧠 Final Level 6 Roadmap
+
+So our entire phase becomes:
+
+LEVEL 6 — BASIC ARRAYS
+│
+├── Pattern 1: Traversal & Access
+│   └── Problems 1–6
+│
+├── Pattern 2: Accumulator
+│   └── Problems 7–12
+│
+├── Pattern 3: Counter + Condition
+│   └── Problems 13–19
+│
+├── Pattern 4: Min / Max Tracking
+│   └── Problems 20–26
+│
+├── Pattern 5: Searching
+│   └── Problems 27–32
+│
+├── Pattern 6: Transformation
+│   └── Problems 33–38
+│
+├── Pattern 7: Position Manipulation
+│   └── Problems 39–44
+│
+├── Pattern 8: Array Comparison
+│   └── Problems 45–50
+│
+├── Pattern 9: Frequency
+│   └── Problems 51–56
+│
+└── Pattern 10: Logical Combination
+    └── Problems 57–62
+
+62 problems, but don't worry about the number. Several are small variations designed to make the pattern automatic.
+
+🔥 The Most Important Part
+
+We're going to connect everything you've already learned:
+
+LEVEL 1–5
+Number Logic
+     ↓
+Digit Extraction
+Accumulator
+Counter
+Comparison
+Min/Max
+Reverse
+Filtering
+     ↓
+LEVEL 6
+ARRAYS
+     ↓
+Traversal
+Accumulator
+Counter
+Min/Max
+Search
+Transformation
+Position manipulation
+Frequency
+     ↓
+FUTURE DSA
+     ↓
+Two Pointers
+Sliding Window
+Prefix Sum
+HashMap
+Binary Search
+Kadane's Algorithm
+
+So Level 6 isn't a completely new world.
+
+It's the next step:
+
+Take the logical patterns you already learned with individual numbers and learn to apply them to a collection of numbers.
