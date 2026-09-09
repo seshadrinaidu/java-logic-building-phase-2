@@ -1,4 +1,4 @@
-package level6_BasicArrays;
+package level6_BasicArrays.Pattern5_ArrayTransformation;
 
 public class Problem30_ReverseArray {
     public static void main(String[] args) {
